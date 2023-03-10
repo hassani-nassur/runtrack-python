@@ -2,15 +2,13 @@ def recopieInverse(chaine):
     
     i = len(chaine) - 1
     
-    copy =""
-    
-    # for i in range(i,-1,-1):
+    copyInvers =""
     
     while i >= 0:
         copy = copy+chaine[i]
         i -= 1
     
-    return copy
+    return copyInvers
 
 nom = recopieInverse("abdoulhamid")
 

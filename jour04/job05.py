@@ -1,6 +1,7 @@
 L = [1,2,3,4,5,6]
 
 print(L[1])
+# je donnée une liste en argument par defaut pour faciliter les testes
 
 def replace(L=L):
     if(len(L)<5):

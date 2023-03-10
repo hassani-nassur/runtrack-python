@@ -3,7 +3,7 @@ def natureTriangle(a,b,c):
     b = float(b)
     c = float(c)
     
-    if (a > 0 and b > 0 and c > 0):
+    if (a < b + c  and b < a + c and c < b + a ):
         if(a == b and b == c):
             print("le tringle de cote a =",a,"; b=",b,"; c=",c," est un triangle equilaterale")
         elif ((a*a == b*b + c*c) or(b*b == a*a +c*c) or( c*c == a*a + b*b)):

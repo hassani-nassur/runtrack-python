@@ -5,10 +5,8 @@ def piramide(chaine,ligne):
     for x in range(ligne):
         stock =""
         for y in range(i, i+x):
-            if i >= len(chaine):
+            while i >= len(chaine):
                 i -= len(chaine)
-            if y >= len(chaine):
-                y -=len(chaine)
             stock +=chaine[y]
             i +=1
         print(stock)

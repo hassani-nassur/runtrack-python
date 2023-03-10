@@ -1,21 +1,39 @@
-def elimineDoublon(list=[10,20,30,20,10,50,60,40,80,50,40]):
-    copy = list
-    taille = 0
+def longeur(list):    
+    compt=0
     for i in list:
-        taille += 1
-        
+        compt +=1
+    return compt
+
+def trie(list = [2,5,12,1,7]):
+    
+    taille = longeur(list)
+    
     for i in range(1,taille):
         
-        value = list[i]
-        j = i - 1
-        while(j>=0 and value == list[j]):
-            if(copy[i]):
-                copy.pop(i)
+        valeur = list[i]
+        j = i-1
+        
+        while j >= 0 and valeur < list[j] :
+            list[j+1] = list[j] 
             j -=1
-        copy.pop(j+1)   
-        # for i in list:
-        #     taille += 1
-    
-    return copy
+        list[j+1] = valeur
+    return list 
 
-print(elimineDoublon())             
+
+list = [10,20,30,20,10,50,60,40,80,50,40]
+
+def elimineDoublons(list):
+    i = 0
+    trie(list)
+    n = longeur(list)
+    if n >= 2:
+        while i < n:
+            if(list[i] == list[i-1]):
+                list = list[0:i] + list[i+1:len(list)]
+                n -=1
+            else:
+                i+=1
+    return list
+
+print(elimineDoublons(list))
+        

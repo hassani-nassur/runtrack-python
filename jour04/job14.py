@@ -17,6 +17,7 @@ def decoupage(chaine):
     return table 
         
 # pour tester rapidement je donnée un chaine par defaut à ma methode 
+
 def my_long_word(nombre = 2, chaine = "je suis nassur hassani"):
     chaienList= decoupage(chaine)
     list = []
@@ -30,4 +31,5 @@ def my_long_word(nombre = 2, chaine = "je suis nassur hassani"):
     return txt
     
 print(my_long_word())
+
 # print(decoupage("je suis nassur hassani"))

@@ -1,5 +1,6 @@
 def changeValeur(list =["nassur","hassani","mouigni"]):
-    if(len(list)==1):
+    
+    if(len(list) == 1):
         txt = "Ta liste ne contient qu'une valeur : "+list[0]
         return txt
     elif(len(list)==0):
